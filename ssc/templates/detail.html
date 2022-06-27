@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<center>
+    <h1 style="background-color: olive; color: white; border: 1PX solid black; margin-top: 15px; padding: 5px;" </h1> Detail Record Here!</h1>
+        <div id="container">
+            <div class="row col-md-4">
+            <div id="divtags" name="divheads" class="col-mt-8">
+                <br>
+                <div class="col-md-6">
+                    <label for="" class="form-label">Name</label>
+                    <label>{{obj.name}}</label>
+                  </div><br>
+                  <div class="col-md-6">
+                    <label for="text" class="form-label">Last Name</label>
+                    <label>{{obj.lastname}}</label>
+                  </div><br>
+                    <div class="col-md-6">
+                      <label for="inputEmail4" class="form-label">Email</label>
+                      <label>{{obj.email}}</label>
+                    </div><br>
+                    <div class="col-md-6">
+                      <label for="inputAddress" class="form-label">Address</label>
+                      <label>{{obj.address}}</label>
+                    </div><br>
+            </div>
+            </div>
+        </div>
+       
+    </center> 
+    <footer class="text-center text-white fixed-bottom"  style="background-color: #21081a;text-align:center;">
+      <!-- Grid container -->
+      <div class="container p-4"></div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2022 Copyright:
+        <a class="text-white" href="https://www.permutehq.com">Permutehq.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %} 
+<link rel="icon" href="static/images/6.png">
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-6">
+      <img src="{% static 'images/2.jpg' %}" style="width: 525px; height: 400px; border: 1px solid red">
+    </div>
+    <div class="col-md-6">
+        <center><h1 class="text-dark" style="background-color: #fce88b; color:crimson;">Registration Form</h1></center>
+        <form method="POST" class="form g-3" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row mt-2">
+              <div class="col-md-4">
+                <label for="" class="form-label">First Name</label>
+              </div>
+              <div class="col-md-8">
+                <input type="text" name="name" id="inputtext" required class="form-control">
+              </div>
+
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-4">
+                <label for="text" class="form-label">Last Name</label>
+              </div>
+              <div class="col-md-8">
+                <input type="text" name="lastname" id="inputlast" required disabled class="form-control">
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-4">
+                <label for="inputEmail4" class="form-label">Email</label>
+              </div>
+              <div class="col-md-8">
+                <input type="email" name="email" id="inputemail" required class="form-control">
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-4">
+                <label for="inputPassword4" class="form-label">Password</label>
+              </div>
+              <div class="col-md-8">
+                <input type="password" name="password" id="inputpassword" required disabled class="form-control">
+              </div>
+            </div> 
+            <div class="row mt-2">
+              <div class="col-md-4">
+                <label for="inputAddress" class="form-label">Address</label>
+              </div>
+              <div class="col-md-8">
+                <input type="text" name="address" id="inputAddress" required placeholder="Eg. street house 123,Quebec, Us" class="form-control">
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-6">
+                <center><button type="submit" class="btn btn-success w-50 pull-right" style="position: relative; left: 100px; margin-top: 50px">SUBMIT</button></center>
+              </div>
+            </div>
+          </form>
+  </div>
+
+</div>
+<!-------use footer here-->
+<footer class="text-center text-white fixed-bottom"  style="background-color: #21081a;text-align:center;">
+  <!-- Grid container -->
+  <div class="container p-3"></div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-white" href="https://www.permutehq.com">Permutuehq.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!----------------end foooter here----->
+
+{% endblock %}

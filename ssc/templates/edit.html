@@ -1,0 +1,77 @@
+{% extends 'index.html' %}
+{% load static %}
+it is a blog and the blog content below of the particle and the value of the particle of the valuen
+{% block content %}
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-6" style="border:2px solid black;">
+      <img src="{% static 'images/1.jpg' %}" style="width: 600px; height: 380px; margin: 5px;">
+    </div>
+    <div class="col-md-6" style="border: 2px solid red;">
+        <h1 class="text" style="text-align:center;color:mediumvioletred">Edit Details Form</h1>
+        <form method="POST" class="form g-3" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="row mt-2">
+              <div class="col-md-4">
+                <label for="" class="form-label">First Name</label>
+              </div>
+              <div class="col-md-8">
+                <input type="text" name="name" id="editinputtext" required class="form-control" value="{{obj.name}}">
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-4">
+                <label for="text" class="form-label">Last Name</label>
+              </div>
+              <div class="col-md-8">
+                <input type="text" name="lastname" id="editinputlast" required class="form-control" value="{{obj.lastname}}">
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-4">
+                <label for="inputEmail4" class="form-label">Email</label>
+              </div>
+              <div class="col-md-8">
+                <input type="email" name="email" id="editinputemail" required class="form-control" value="{{obj.email}}">
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-4">
+                <label for="inputAddress" class="form-label">Address</label>
+              </div>
+              <div class="col-md-8">
+                <input type="text" name="address" id="editinputAddress" required placeholder="Eg. street house 123,Quebec, Us" class="form-control" value="{{obj.address}}">
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="col-md-6">
+                <button type="submit" class="btn btn-danger w-50 pull-right">SUBMIT</button>
+              </div>
+            </div>
+          </form>
+  </div>
+        <div class="col-6" style="border: 3px solid pink;">
+
+        </div>
+
+        <div class="col-md-6" style="border: 3px solid red;">
+          <h1>YEah this is heading of the page and will come on this page and then we will enter the same value and then the value must be in the same line and the value occour in the same line of code..</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam ipsa aperiam, architecto dolores quaerat ea nihil laboriosam illum! Sint consequatur qui error voluptate aliquid dolorum id inventore repudiandae, expedita eum? Sit magnam pariatur deleniti, eaque cum odit labore voluptatum aliquam corrupti fugiat ex consectetur asperiores officia repellat atque? Deleniti, omnis. Fugiat non accusamus impedit officia ad blanditiis, voluptatem ut iste labore illo? Reiciendis fugit minima magnam saepe laboriosam quod laborum itaque cupiditate quo dicta consequatur eius amet, ut soluta debitis minus! Placeat optio cumque doloremque, dicta, totam porro odio, sequi quia blanditiis nemo quas non minus distinctio molestias corporis? Est.
+
+          </p>
+        </div>
+</div>
+     
+<footer class="text-center text-white fixed-bottom"  style="background-color: #21081a;text-align:center;position: fixed;">
+  <!-- Grid container -->
+  <div class="container p-2"></div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2022 Copyright:
+    <a class="text-white" href="https://www.permutehq.com">Permutehq.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+{% endblock %}

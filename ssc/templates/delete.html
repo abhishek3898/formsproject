@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<center>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+    <h1 style="color: black;">Delete Record</h1>
+    <div class="container">
+        <div class="row-md-2">
+            <div class="col-md-6">
+                <label class="form-label">Name</label>
+                <label>{{obj.name}}</label>
+            </div><br><br>
+            <div class="col-md-6">
+                <label class="form-label">Last Name</label>
+                <label>{{obj.lastname}}</label>
+            </div><br><br>
+            <div class="col-md-6">
+                <label class="form-label">Email</label>
+                <label>{{obj.email}}</label>
+            </div><br><br>
+            <div class="col-md-6">
+                <label class="form-label">Address</label>
+                <label>{{obj.address}}</label>
+            </div><br><br>
+         </div>
+         <button type="submit" class="btn btn-danger w-50 pull-right">YES</button>
+         <a href="{% url 'index'%}" class="btn btn-secondary w-50 pull-right">CANCEL</button>
+    </div>
+    </form>
+</center>
+
+{% endblock %}

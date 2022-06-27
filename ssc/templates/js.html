@@ -1,0 +1,110 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <!-- <script>
+        function myAdd() {
+            document.getElementById("heading").innerhtml = 'MYADD_Content';
+        }
+    </script> -->
+    <!-- <script src="{% static 'js/new.js' %}"></script> -->
+</head>
+<body>
+    <center><h1 style="margin-top: 20px;"> What we learn from javascript??</h1>
+        <p id="demo"></p>
+        <p id="odd" style="color: olive; font-size:x-large">Previous Content</p>
+        <p id="heading">A Paragraph</p>
+        <p id="even">javascript also chansge the style of our css.</p>
+        <p class="fruit"></p>
+        <p id="fruit"></p>
+        <a href="{% url 'index' %}">HOME</a>
+        <button type="button" class="btn btn-success" onclick="document.getElementById('demo').innerHTML = Date()">CLICK HERE</button>
+        <button style="width: 100px;" type="button" class="btn btn-danger" onclick="document.getElementById('odd').innerHTML = 'Latest Content'">SUBMIT</button>
+        <button type="button" class="btn btn-primary" onclick="document.getElementById('even').style.fontSize='50px'">NOW CLICK</button>
+        <button type="button" class="btn btn-dark" onclick="myAdd()">USE IT</button>        <!----myadd() perform a event-->
+        <p id="new"></p>
+        <p>My first Paragraph</p>
+        <!-- <p class="constructor">Hello</p>  -->
+        <!-- <script>
+            function myAdd() {
+                document.getElementById("heading").innerText = 'Add Content';
+            }
+
+            function myFunction() {
+                document.getElementById("new").innerText  =7 ;
+                document.write(50+50);
+                window.alert(10);
+                //alert(10*100);
+                console.log(100-70);
+                console.log(50-50);
+                console.log('permute')
+
+                let a,b,c;
+                a=5;
+                b=15;
+                c=a-b;
+                document.getElementById('new').innerHTML="THE<b> VALUE<b> OF C IS" +c+ '.';
+                
+                //let carName = 'Volvo';
+                //document.getElementById('new').innerHTML=carName;
+
+                const cars = ["MERCEDEZ", "VOLVO", "PORSCHE","LAMBORGHININ"]
+                document.getElementById('new').innerHTML = cars;
+
+                arr1 = ['apple','banana'];                                      //concat object
+                arr2 = ['car', 'bike','scooter'];
+                arr3 = ['india','srilanka','bangladesh'];
+                var car = arr1.concat(arr2,arr3);
+                document.getElementById('new').innerText = car;
+            }
+            myFunction()                                                                                //function call-->
+
+            <!-- const fruits = ["kishmish", "almonds",];
+            let wahi = fruits.constructor; -->
+        <p><input type="number" id="isAge" value="30"></p>
+        <p id="my"></p>
+        <button onclick="myFunction()">click</button>
+
+        
+        <script>
+            var ages = ['10','12','30','40'];
+            function myChild(age){
+                return age > 
+            document.getElementById('isAge').value;
+            }
+            function myFunction(){
+                document.getElementById('my').innerHTML = ages.filter(myChild);
+            }
+
+
+        </script>
+
+        <button class="btn btn-danger" type="submit" onclick="myFunction()">Press</button>
+        <button class="btn btn-light" type="button" onclick="myConsole()">HERE</button>
+
+    </center>
+
+
+
+</body> 
+</html>
+
+<!-------use footer here----------------------------->
+<footer class="text-center text-white fixed-bottom"  style="background-color: #21081a;text-align:center;">
+    <!-- Grid container -->
+    <div class="container p-3"></div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-6" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2022 Copyright:
+      <a class="text-white" href="https://www.permutehq.com">Permutehq.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+<!--------------------END FOOOTER HERE---------------->
+{% endblock  %}
